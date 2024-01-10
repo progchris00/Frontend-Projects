@@ -89,7 +89,8 @@ main {
 }
 
 .left a {
-  padding: 10px 40px;
+  padding: 10px 60px;
+  font-size: 18px;
   background-color: black;
   color: white;
   border-radius: 14px;
