@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Navigation bar */
+header {
+  height: 50px;
+  border-bottom: 1px solid hsla(210, 26%, 7%, 0.3);
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+}
+
+li {
+  display: block;
+}
+
+li a {
+  text-decoration: none;
+  color: hsla(210, 26%, 7%, 0.7);
+}
+
+/* Hover effects */
+li a:hover {
+  color: hsl(210, 26%, 7%);
+}
