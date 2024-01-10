@@ -33,3 +33,26 @@ li a {
 li a:hover {
   color: hsl(210, 26%, 7%);
 }
+
+/* first page */
+.first-page {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.right {
+  justify-content: center;
+}
+
+.left {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
