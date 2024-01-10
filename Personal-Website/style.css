@@ -61,7 +61,21 @@ main {
 }
 
 /* second page */
+.second-page {
+  height: 500px;
+}
+
 .gallery {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery img {
+  height: 390px;
+  width: 100%;
+  max-width: 290px;
+  background-size: cover;
+  object-fit: cover;
 }
