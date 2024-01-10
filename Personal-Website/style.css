@@ -95,3 +95,32 @@ main {
   object-fit: cover;
   object-position: 50% 58%;
 }
+
+/* fourth page */
+.fourth-page {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-answer {
+  width: 80%;
+}
+
+.question-answer p {
+  display: flex;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 24px;
+  font-style: italic;
+  border-bottom: 1px hsla(210, 26%, 7%, 0.7) dashed;
+}
+
+.question {
+  width: 60%;
+}
+
+.question-answer p:last-child {
+  border-bottom: none;
+}
