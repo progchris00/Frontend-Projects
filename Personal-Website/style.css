@@ -35,7 +35,6 @@ li a:hover {
 }
 
 /* first page */
-
 main {
   margin: 0 auto;
   width: 90%;
@@ -59,4 +58,10 @@ main {
 .left {
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+/* second page */
+.gallery {
+  display: flex;
+  gap: 10px;
 }
