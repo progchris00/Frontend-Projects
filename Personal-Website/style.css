@@ -71,6 +71,9 @@ main {
 .first-page {
   height: 95vh;
   display: flex;
+  background-image: url(assets/images/background.png);
+  background-position: 70% 50%;
+  background-repeat: no-repeat;
 }
 
 .content {
