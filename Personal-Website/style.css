@@ -83,3 +83,15 @@ main {
   background-size: cover;
   object-fit: cover;
 }
+
+/* third page */
+.third-page {
+  height: 500px;
+}
+
+.third-page img {
+  height: 330px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 58%;
+}
