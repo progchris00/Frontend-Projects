@@ -35,11 +35,15 @@ li a:hover {
 }
 
 /* first page */
-.first-page {
-  width: 80%;
-  display: flex;
+
+main {
   margin: 0 auto;
+  width: 90%;
+}
+
+.first-page {
   height: 500px;
+  display: flex;
 }
 
 .content {
