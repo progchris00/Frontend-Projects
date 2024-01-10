@@ -7,6 +7,25 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* Fonts */
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 60px;
+}
+
+nav a {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 32px;
+}
+
 /* Navigation bar */
 nav {
   height: 50px;
