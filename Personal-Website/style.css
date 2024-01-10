@@ -96,7 +96,7 @@ main {
 
 /* second page */
 .second-page {
-  height: 500px;
+  height: 95vh;
 }
 
 .gallery {
@@ -116,7 +116,7 @@ main {
 
 /* third page */
 .third-page {
-  height: 500px;
+  height: 95vh;
 }
 
 .third-page img {
@@ -128,7 +128,7 @@ main {
 
 /* fourth page */
 .fourth-page {
-  height: 500px;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
