@@ -4,6 +4,8 @@
 
 html {
   font-size: 16px;
+  font-family: "Playfair Display", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -33,6 +35,8 @@ ul > li {
 }
 
 ul > li > a {
+  font-weight: 700;
+  font-size: 1.1rem;
   text-decoration: none;
   color: #7a8727;
 }
@@ -59,8 +63,12 @@ main {
   padding: 20px 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 50%;
+}
+
+.left {
+  gap: 20px;
+  height: 60%;
 }
 
 .image-container {
@@ -74,4 +82,22 @@ main {
   width: 80vh;
   border-radius: 100%;
   margin-left: 20px;
+}
+
+/* Fonts */
+h1,
+p {
+  margin: 0;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  color: #7a8727;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.description {
+  line-height: 25px;
+  font-family: "Roboto", sans-serif;
 }
