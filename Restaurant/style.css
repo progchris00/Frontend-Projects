@@ -16,7 +16,7 @@ body {
 nav {
   height: 50px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: white;
   top: 0;
 }
@@ -48,7 +48,7 @@ main {
 
 .hero {
   height: 400px;
-  width: 70%;
+  width: 65%;
   background-color: white;
   display: flex;
   align-items: center;
@@ -61,4 +61,17 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 50%;
+}
+
+.image-container {
+  background-image: url(assets/images/cover1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  border: 10px solid white;
+  background-color: white;
+  height: 80vh;
+  width: 80vh;
+  border-radius: 100%;
+  margin-left: 20px;
 }
