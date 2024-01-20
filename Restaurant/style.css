@@ -10,25 +10,55 @@ body {
   margin: 0;
   padding: 0;
   background-color: #7a8727;
-  height: 100vh;
 }
+
+/* Navigation bar */
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+  top: 0;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+}
+
+ul > li {
+  display: block;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: #7a8727;
+}
+
+/* Contents */
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 90vh;
 }
 
 .hero {
+  height: 400px;
+  width: 70%;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  height: 400px;
-  width: 70%;
-  padding: 20px 40px;
 }
 
 .hero > section {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 50%;
 }
