@@ -103,6 +103,7 @@ p {
 
 /* Hover effects */
 ul > li > a:hover {
+  transition: background-color 0.5s, color 0.5s;
   background-color: #7a8727;
   color: white;
 }
