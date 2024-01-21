@@ -36,6 +36,7 @@ ul > li {
 }
 
 ul > li > a {
+  padding: 15px;
   font-weight: 700;
   font-size: 1.1rem;
   text-decoration: none;
@@ -58,7 +59,6 @@ main {
 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 
 .description {
@@ -99,4 +99,10 @@ p {
   color: #737373;
   font-size: 1.3rem;
   line-height: 35px;
+}
+
+/* Hover effects */
+ul > li > a:hover {
+  background-color: #7a8727;
+  color: white;
 }
