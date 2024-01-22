@@ -48,7 +48,7 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  height: 90vh;
+  height: 95vh;
 }
 
 .left {
@@ -68,7 +68,7 @@ main {
 }
 
 .image-container {
-  background-image: url(assets/images/cover1.svg);
+  background-image: url(assets/images/cover.svg);
   background-repeat: no-repeat;
   background-size: cover;
   border: 10px solid white;
@@ -78,6 +78,26 @@ main {
   border-radius: 100%;
   grid-column: 9 / 12;
   grid-row: 2 / 12;
+}
+
+.green-background {
+  background-color: #444d1e;
+  grid-column: 10 / 13;
+  grid-row: 1 / 13;
+
+  order: -1;
+}
+
+.design-top {
+  height: 100px;
+  grid-column: 12;
+  grid-row: 2 / 6;
+}
+
+.design-bottom {
+  height: 100px;
+  grid-column: 1;
+  grid-row: 10 / 12;
 }
 
 /* Fonts */
