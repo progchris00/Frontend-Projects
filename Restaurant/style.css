@@ -44,7 +44,7 @@ ul > li > a {
 }
 
 /* Contents */
-main {
+.hero {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -82,6 +82,9 @@ main {
 
 .green-background {
   background-color: #444d1e;
+}
+
+.hero-part {
   grid-column: 10 / 13;
   grid-row: 1 / 13;
 
@@ -100,6 +103,21 @@ main {
   grid-row: 10 / 12;
 }
 
+/* Menu section */
+.menu {
+  display: grid;
+  height: 100vh;
+}
+
+.menu-part {
+  grid-column: 1 / 13;
+  grid-row: 8 / 13;
+}
+
+.gallery {
+  align-self: center;
+  justify-self: center;
+}
 /* Fonts */
 h1,
 p {
