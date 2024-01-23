@@ -109,14 +109,16 @@ ul > li > a {
   height: 100vh;
 }
 
-.menu-part {
-  grid-column: 1 / 13;
-  grid-row: 8 / 13;
-}
+/* .menu-part {
+  align-self: flex-end;
+} */
 
 .gallery {
   align-self: center;
   justify-self: center;
+
+  display: flex;
+  gap: 20px;
 }
 /* Fonts */
 h1,
