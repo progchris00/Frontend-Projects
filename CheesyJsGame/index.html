@@ -10,7 +10,7 @@
     <main>
       <section>
         <h1>❤️ Online Survey ❤️</h1>
-        <h2>Please answer the following with the correct answer</h2>
+        <h2>Please answer the following with all your heart.</h2>
         <form action="">
           <legend>What is celebrated every February 14?</legend>
           <label for="valentine"
@@ -55,10 +55,19 @@
           </label>
 
           <legend>Sino pinaka poging tao sa mundo?</legend>
-          <input type="text" placeholder="Hmmm" pattern="Christian" />
+          <input type="text" placeholder="Hmmm" pattern="Christian" required />
           <input class="block" type="submit" value="Submit" />
         </form>
       </section>
     </main>
   </body>
+  <script>
+    const submitButton = document.querySelector(".block");
+
+    submitButton.onclick = () => {
+      alert(
+        "Thank you for answering this form.\nYou are now my Valentines Date\n\nImportant Information\nWhere: UP Baker's field \nWhen: February 14, 2024 (Wednesday)\nWho: Christian Ortiz"
+      );
+    };
+  </script>
 </html>
