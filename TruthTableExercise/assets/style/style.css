@@ -48,6 +48,7 @@ section {
   background-color: #191919;
   border-radius: 20px;
   padding: 20px 40px;
+  box-shadow: 0 3px 6px #a88250;
 }
 
 aside {
@@ -76,6 +77,17 @@ input {
 label {
   display: block;
   margin-bottom: 10px;
+}
+
+button {
+  margin-top: 15px;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 14px;
+  background-color: #a88250;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
 
 /* Fonts */
