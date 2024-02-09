@@ -2,20 +2,25 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   color: #fafafa;
+  font-family: "Poppins", sans-serif;
 }
 
 section.price {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  height: 125vh;
+  height: 120vh;
 }
 
 .top-area {
-  grid-row: 1 / 8;
+  grid-row: 1 / 9;
   grid-column: 1 / 13;
   background-color: #1e1e1f;
 }
@@ -26,21 +31,48 @@ section.price {
 }
 
 .text {
-  width: 40%;
+  width: 42%;
   text-align: center;
 }
 
+/* Fonts */
 .tagline {
   font-size: 3rem;
   margin: 30px 0 0;
 }
 
 .text-section p {
-  margin: 10px 0 0;
+  font-size: 0.9rem;
+  margin: 5px 0 0;
 }
 
+.plan-title {
+  font-size: 1rem;
+}
+
+.plan-price {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.plan-description {
+  font-size: 0.7rem;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul > li {
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+/* Section */
 .prices-plan {
-  grid-row: 7 / 12;
+  grid-row: 6 / 13;
   grid-column: 1 / 13;
 
   display: flex;
@@ -61,11 +93,25 @@ section.price {
 .plan {
   width: 300px;
   height: 400px;
-  padding: 20px;
+  padding: 20px 30px;
   border-radius: 20px;
   border: 2px solid hsl(0, 0%, 22%);
 }
 
+.horizontal-divider {
+  border: 1px solid black;
+}
+
 .plan.premium {
   height: 440px;
+}
+
+button {
+  color: white;
+  display: block;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 15px 50px;
+  margin: 0 auto;
+  background-color: #28282a;
 }
