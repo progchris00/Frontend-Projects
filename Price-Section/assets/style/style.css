@@ -11,33 +11,15 @@ section.price {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #121212;
 }
 
 .prices-plan {
-  /* display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 20px; */
   display: flex;
   gap: 20px;
   align-items: end;
   justify-content: center;
 }
-
-/* .normal {
-  grid-column: 2 / 4;
-  grid-row: 2 / 6;
-}
-
-.premium {
-  grid-column: 4 / 6;
-  grid-row: 1 / 6;
-}
-
-.organization {
-  grid-column: 6 / 8;
-  grid-row: 2 / 6;
-} */
 
 .normal,
 .organization {
