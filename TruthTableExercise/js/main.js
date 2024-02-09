@@ -2,7 +2,7 @@ const submitBtn = document.querySelector("#submitBtn");
 const inputs = document.querySelectorAll("input");
 const cell = document.querySelectorAll("td");
 
-const tableOneAnswer = [1, 0, 0, 1];
+const tableOneAnswer = ["1", "0", "0", "1"];
 
 submitBtn.onclick = checkAnswer;
 
