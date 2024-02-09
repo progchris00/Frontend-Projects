@@ -10,6 +10,7 @@ body {
   margin: 0;
   color: #fafafa;
   font-family: "Poppins", sans-serif;
+  background-color: white;
 }
 
 section.price {
@@ -22,7 +23,7 @@ section.price {
 .top-area {
   grid-row: 1 / 9;
   grid-column: 1 / 13;
-  background-color: #1e1e1f;
+  background-color: #1a1a1a;
 }
 
 .text-section {
@@ -43,7 +44,7 @@ section.price {
 
 .text-section p {
   font-size: 0.9rem;
-  margin: 5px 0 0;
+  margin: 20px 0 0;
 }
 
 .plan-title {
@@ -51,6 +52,7 @@ section.price {
 }
 
 .plan-price {
+  color: #c298f7;
   margin: 0;
   font-size: 2rem;
   font-weight: 700;
@@ -70,6 +72,13 @@ ul > li {
   padding: 0;
 }
 
+.highlighted {
+  background-color: #c298f7;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: #282828;
+}
+
 /* Section */
 .prices-plan {
   grid-row: 6 / 13;
@@ -83,11 +92,11 @@ ul > li {
 
 .normal,
 .organization {
-  background-color: #28282a;
+  background-color: #2a2a2a;
 }
 
 .premium {
-  background-color: #1e1e1f;
+  background-color: #2a2a2a;
 }
 
 .plan {
@@ -109,9 +118,9 @@ ul > li {
 button {
   color: white;
   display: block;
-  border: 1px solid white;
+  border: none;
   border-radius: 20px;
   padding: 15px 50px;
   margin: 0 auto;
-  background-color: #28282a;
+  background-color: #c298f7;
 }
