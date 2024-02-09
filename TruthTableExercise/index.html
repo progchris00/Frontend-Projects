@@ -7,9 +7,34 @@
     <title>Truth Table - Exercise</title>
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li></li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <h1>Truth Table Exercise</h1>
-      <section>
+      <section class="introduction">
+        <h1>Truth Table Exercise</h1>
+        <p>Greetings here 👋</p>
+      </section>
+      <section class="proposition">
+        <h2>Proposition or not?</h2>
+        <p class="instruction">
+          For this section, identify weather the given statement was a
+          proposition or not.
+        </p>
+        <input type="radio" />Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Facere, natus! <input type="radio" />Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Facere, natus! <input type="radio" />Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Facere, natus!
+        <input type="radio" />Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Facere, natus! <input type="radio" />Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Facere, natus!
+        <button>Submit</button>
+      </section>
+      <section class="part1">
         <h2>Part 1: Complete the table</h2>
         <p>Fill-up each cell based on the given propositions.</p>
         <table id="table-exercise-one">
@@ -32,7 +57,34 @@
         </table>
         <button id="submitBtn">Submit</button>
       </section>
-      <script src="js/main.js"></script>
+      <section class="part2">
+        <h1>Part 2:</h1>
+        <table id="table-exercise-one">
+          <thead>
+            <tr>
+              <th>p</th>
+              <th>~p</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
+    <aside>
+      <h2>Table of Contents</h2>
+      <p>Part 1: Proposition or not?</p>
+      <p>Part 2: Complete the table</p>
+      <p>Part 3: Compound Expression</p>
+    </aside>
+    <script src="js/main.js"></script>
   </body>
 </html>
