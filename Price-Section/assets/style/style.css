@@ -11,21 +11,41 @@ section.price {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  height: 95vh;
+  height: 125vh;
 }
 
 .top-area {
-  grid-row: 1 / 9;
+  grid-row: 1 / 8;
   grid-column: 1 / 13;
   background-color: #1e1e1f;
 }
 
+.text-section {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  width: 40%;
+  text-align: center;
+}
+
+.tagline {
+  font-size: 3rem;
+  margin: 30px 0 0;
+}
+
+.text-section p {
+  margin: 10px 0 0;
+}
+
 .prices-plan {
-  grid-row: 5 / 12;
+  grid-row: 7 / 12;
   grid-column: 1 / 13;
 
   display: flex;
   justify-content: center;
+  align-items: end;
   gap: 20px;
 }
 
