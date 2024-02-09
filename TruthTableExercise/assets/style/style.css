@@ -67,3 +67,8 @@ input {
   border: none;
   outline: none;
 }
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
