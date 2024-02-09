@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background-color: white;
+  background-color: #ffffff;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -90,11 +90,16 @@ button {
   font-weight: 700;
 }
 
+.separator {
+  border-bottom: 1px solid #a88250;
+  margin: 20px 0;
+}
+
 /* Fonts */
 p,
 label {
   font-family: "Open Sans", sans-serif;
-  color: white;
+  color: #ffffff;
 }
 
 h1 {
@@ -106,4 +111,13 @@ h2 {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   color: #a88250;
+}
+
+.section-title {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.section-instruction {
+  margin: 0;
 }
