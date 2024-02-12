@@ -13,6 +13,9 @@ const answerPartTwo_four = ["1", "1", "0", "1", "0", "1", "0", "1", "1", "0", "0
 const btnPartTwo_five = document.querySelector("#btnPartTwo_five");
 const answerPartTwo_five = ["1", "1", "1", "1", "0", "0", "0", "1", "1", "0", "0", "1"];
 
+const btnPartTwo_six = document.querySelector("#btnPartTwo_six");
+const answerPartTwo_six = ["1", "1", "1", "1", "0", "0", "0", "1", "0", "0", "0", "1"];
+
 btnPartTwo_one.onclick = function() {
     CheckAnswer("two-one", answerPartTwo_one);
 };
@@ -32,6 +35,11 @@ btnPartTwo_four.onclick = function() {
 btnPartTwo_five.onclick = function() {
     CheckAnswer("two-five", answerPartTwo_five);
 };
+
+btnPartTwo_six.onclick = function() {
+    CheckAnswer("two-six", answerPartTwo_six);
+};
+
 
 
 function CheckAnswer(tableNumber, tableAnswer)
