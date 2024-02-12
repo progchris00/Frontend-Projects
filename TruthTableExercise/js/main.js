@@ -7,6 +7,9 @@ const answerPartTwo_two = ["1", "1", "1", "1", "0", "0", "0", "1", "0", "0", "0"
 const btnPartTwo_three = document.querySelector("#btnPartTwo_three");
 const answerPartTwo_three = ["1", "1", "1", "1", "0", "1", "0", "1", "1", "0", "0", "0"];
 
+const btnPartTwo_four = document.querySelector("#btnPartTwo_four");
+const answerPartTwo_four = ["1", "1", "0", "1", "0", "1", "0", "1", "1", "0", "0", "0"];
+
 btnPartTwo_one.onclick = function() {
     CheckAnswer("two-one", answerPartTwo_one);
 };
@@ -17,6 +20,10 @@ btnPartTwo_two.onclick = function() {
 
 btnPartTwo_three.onclick = function() {
     CheckAnswer("two-three", answerPartTwo_three);
+};
+
+btnPartTwo_four.onclick = function() {
+    CheckAnswer("two-four", answerPartTwo_four);
 };
 
 
