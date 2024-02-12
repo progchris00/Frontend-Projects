@@ -1,39 +1,40 @@
-const submitBtn = document.querySelector("#submitBtn");
-const inputs = document.querySelectorAll("input");
-const cell = document.querySelectorAll("td");
+const btnPartTwo_one = document.querySelector("#btnPartTwo_one");
+const answerPartTwo_one = ["1", "0", "0", "1"];
 
-const answers = [
+const btnPartTwo_two = document.querySelector("#btnPartTwo_two");
+const answerPartTwo_two = ["1", "1", "1", "1", "0", "0", "0", "1", "0", "0", "0", "0"];
+
+btnPartTwo_one.onclick = function() {
+    CheckAnswer("two-one", answerPartTwo_one);
+};
+
+btnPartTwo_two.onclick = function() {
+    CheckAnswer("two-two", answerPartTwo_two);
+};
+
+
+function CheckAnswer(tableNumber, tableAnswer)
+{
+    let input, cell, answer;
+
+    input = document.querySelectorAll("#table-exercise-" + tableNumber + " input");
+    cell = document.querySelectorAll("#table-exercise-" + tableNumber + " td");
+    answer = tableAnswer;
+
+    for (let index = 0; index < input.length; index++)
     {
-        part: "2.1",
-        "answer": ["1", "0", "0", "1"],
-
-        part: "2.2",
-        "answer": ["1", "0", "0", "1"]
+        if (input[index].value == answer[index]) 
+        {
+            input[index].style.background = "#66e066";
+            cell[index].style.background = "#66e066";
+        }
+        else
+        {
+            input[index].style.background = "#db2929";
+            cell[index].style.background = "#db2929";
+        }
     }
-]
-
-submitBtn.onclick = checkAnswerTable;
-
-// function checkAnswerTable()
-// {
-//     checkAnswerCheckbox(part);
-// }
-
-// function CheckAnswer(part)
-// {
-//     for (let index = 0; index < inputs.length; index++)
-//     {
-//         if (inputs[index].value == tableOneAnswer[index]) {
-//             inputs[index].style.background = "green";
-//             cell[index].style.background = "green";
-//         }
-//         else
-//         {
-//             inputs[index].style.background = "red";
-//             cell[index].style.background = "red";
-//         }
-//     }
-// }
+}
 
 const p1Button = document.querySelector("#p1Button");
 const p1CheckBox = document.querySelectorAll("#p1CheckBox");
