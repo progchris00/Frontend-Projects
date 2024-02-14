@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f2fcfc;
+}
+
+/* Sections */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#game {
+  width: 700px;
+}
+
+#scene {
+  background-image: url(/assets/images/1.svg);
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
