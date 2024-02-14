@@ -19,11 +19,23 @@ main {
   width: 700px;
 }
 
+#stats {
+  display: flex;
+  gap: 20px;
+  background-color: #30292e;
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #f1f1f0;
+}
+
 #scene {
   background-image: url(/assets/images/1.svg);
   height: 400px;
   background-size: contain;
   background-repeat: no-repeat;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 button {
@@ -33,10 +45,16 @@ button {
   padding: 10px 20px;
   text-transform: uppercase;
   color: #30292e;
+  cursor: pointer;
 }
 
 #controls {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+.icons {
+  width: 12px;
+  margin-right: 5px;
 }
