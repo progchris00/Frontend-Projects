@@ -25,3 +25,18 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+button {
+  border: 2.5px solid #3d3b52;
+  border-radius: 16px;
+  background: linear-gradient(-0.51turn, #a8d67c, #74a050 30%);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #30292e;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
