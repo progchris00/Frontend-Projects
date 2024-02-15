@@ -24,9 +24,17 @@ let locations = [
     }
 ]
 
-button1.onclick = goStore;
+button1.onclick = startGame;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
+
+
+function startGame() {
+    button1.innerText = "go to store";
+    button1.onclick = goStore;
+    button2.style.display = "block";
+    button3.style.display = "block";
+}
 
 function goStore() {
     update(locations[1]);

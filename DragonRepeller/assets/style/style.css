@@ -33,7 +33,7 @@ main {
 
 #scene {
   background-color: #30292e;
-  background-image: url(/assets/images/1.svg);
+  background-image: url(/assets/images/start.svg);
   height: 390px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -47,6 +47,11 @@ button {
   text-transform: uppercase;
   color: #30292e;
   cursor: pointer;
+}
+
+#button2,
+#button3 {
+  display: none;
 }
 
 #controls {
