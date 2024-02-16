@@ -1,5 +1,4 @@
 let scene = document.querySelector("#scene");
-let currentLocation = 0;
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -24,9 +23,9 @@ let locations = [
     },
     {
         name: "dragon",
+        scene: "url(/assets/images/dragon.svg)",
         "button text": ["attack", "dodge", "run"],
         "button action": [attack, dodge, goTown],
-        scene: "url(/assets/images/dragon.svg)",
     },
     {
         name: "town",
@@ -62,11 +61,11 @@ function goCave() {
 }
 
 function fightDragon() {
-    update(locations[2])
+    update(locations[2]);
 }
 
 function goTown() {
-    update(locations[3])
+    update(locations[3]);
 }
 
 function buyHealth() {
@@ -82,10 +81,6 @@ function fightSlime() {
 }
 
 function fightBeast() {
-
-}
-
-function fightDragon() {
 
 }
 
