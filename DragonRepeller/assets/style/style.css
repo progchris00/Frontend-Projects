@@ -31,6 +31,10 @@ main {
   color: #f1f1f0;
 }
 
+#inventory {
+  margin-left: auto;
+}
+
 #scene {
   background-color: #30292e;
   background-image: url(/assets/images/start.svg);

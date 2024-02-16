@@ -2,6 +2,8 @@ let scene = document.querySelector("#scene");
 
 let text = document.querySelector("#text");
 
+let inventory = ["stick"];
+
 // Stats
 let xp = 0;
 let health = 100;
