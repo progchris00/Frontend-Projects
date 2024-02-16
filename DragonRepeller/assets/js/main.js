@@ -29,14 +29,14 @@ button3.onclick = fightDragon;
 let locations = [
     {
         name: "store",
-        scene: "url(/assets/images/store.svg)",
+        scene: "url(assets/images/store.svg)",
         text: "You enter the store.",
         "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
         "button action": [buyHealth, buyWeapon, goTown]
     },
     {
         name: "cave",
-        scene: "url(/assets/images/cave.svg)",
+        scene: "url(assets/images/cave.svg)",
         text: "You enter the cave. You see some monsters.",
         "button text": ["fight slime", "fight fanged beast", "Go to town square"],
         "button action": [fightSlime, fightBeast, goTown]
@@ -44,7 +44,7 @@ let locations = [
     {
         name: "town",
         text: 'You are in the town square. You see a sign that says "Store".',
-        scene: "url(/assets/images/town.svg)",
+        scene: "url(assets/images/town.svg)",
         "button text": ["go to store", "go to cave", "fight dragon"],
         "button action": [goStore, goCave, fightDragon]
     },
@@ -65,19 +65,19 @@ const monsters = [
       name: "slime",
       level: 2,
       health: 15,
-      scene: "url(/assets/images/slime.svg)",
+      scene: "url(assets/images/slime.svg)",
     },
     {
       name: "fanged beast",
       level: 8,
       health: 60,
-      scene: "url(/assets/images/beast.svg)",
+      scene: "url(assets/images/beast.svg)",
     },
     {
       name: "dragon",
       level: 20,
       health: 300,
-      scene: "url(/assets/images/dragon.svg)",
+      scene: "url(assets/images/dragon.svg)",
     }
 ]
 
@@ -163,6 +163,7 @@ function goFight(monster) {
     monsterStats.style.display = "block";
     monsterName.innerText = monster.name;
     monsterHealth.innerText = monster.health;
+
     button1.innerText = "attack";
     button2.innerText = "dodge";
     button3.innerText = "run";
