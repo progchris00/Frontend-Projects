@@ -1,13 +1,13 @@
 let scene = document.querySelector("#scene");
-
 let text = document.querySelector("#text");
-
-let inventory = ["stick"];
+let inventoryText = document.querySelector("#inventoryText");
+let inventory = ["Stick"];
+let currentWeapon = 0;
 
 // Stats
 let xp = 0;
 let health = 100;
-let gold = 50;
+let gold = 900;
 
 let xpText = document.querySelector("#xpText");
 let healthText = document.querySelector("#healthText");
@@ -22,6 +22,7 @@ button1.onclick = startGame;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
+// Location
 let locations = [
     {
         name: "store",
@@ -52,6 +53,18 @@ let locations = [
         "button action": [goStore, goCave, fightDragon]
     }
 ]
+
+// Weapons
+
+const weapons = [
+    { name: 'stick', power: 5 },
+    { name: 'dagger', power: 30 },
+    { name: 'claw hammer', power: 50 },
+    { name: 'sword', power: 100 }
+  ];
+
+
+// Functions
 
 function update(location) {
     text.innerText = location.text;
@@ -88,7 +101,7 @@ function goTown() {
 }
 
 function buyHealth() {
-    if (gold > 0)
+    if (gold > 10)
     {
         health += 10;
         healthText.innerText = health;
@@ -100,7 +113,22 @@ function buyHealth() {
 }
 
 function buyWeapon() {
-
+    if (currentWeapon < weapons.length - 1)
+    {
+        if (gold > 30)
+        {
+            currentWeapon += 1;
+            inventory.push(weapons[currentWeapon].name);
+            inventoryText.innerText += "," + " " + inventory[currentWeapon];
+            gold -= 30;
+            goldText.innerText = gold;
+            text.innerText = "You bought " + weapons[currentWeapon].name + " for 30 gold.";
+        } else {
+            text.innerText = "Not enough gold to buy " + weapons[currentWeapon + 1].name + ".";
+        }
+    } else {
+        text.innerText = "You already have the best weapon";
+    }
 }
 
 function fightSlime() {
