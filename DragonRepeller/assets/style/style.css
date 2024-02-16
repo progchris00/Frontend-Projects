@@ -81,4 +81,8 @@ button {
 
 #monsterStats {
   display: none;
+  padding: 10px 0;
+  justify-content: space-around;
+  background-color: #ac3e00;
+  color: white;
 }

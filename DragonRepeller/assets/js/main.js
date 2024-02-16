@@ -6,6 +6,7 @@ let currentWeapon = 0;
 let monsterStats = document.querySelector("#monsterStats");
 let monsterName = document.querySelector("#monsterName");
 let monsterHealth = document.querySelector("#monsterHealth");
+let controls = document.querySelector("#controls");
 
 // Stats
 let xp = 0;
@@ -111,6 +112,7 @@ function goCave() {
 }
 
 function goTown() {
+    controls.style.paddingBottom = "0";
     monsterStats.style.display = "none";
     update(locations[2]);
 }
@@ -160,7 +162,8 @@ function fightDragon() {
 }
 
 function goFight(monster) {
-    monsterStats.style.display = "block";
+    controls.style.paddingBottom = "15px";
+    monsterStats.style.display = "flex";
     monsterName.innerText = monster.name;
     monsterHealth.innerText = monster.health;
 
