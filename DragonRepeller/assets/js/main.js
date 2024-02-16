@@ -170,6 +170,7 @@ function goFight(monster) {
     button2.onclick = dodge;
     button3.onclick = goTown;
     text.innerText = "You are fighting a monster.";
+    scene.style.backgroundImage = monster.scene;
 }
 
 
