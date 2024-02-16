@@ -29,14 +29,14 @@ button3.onclick = fightDragon;
 let locations = [
     {
         name: "store",
-        scene: "url(assets/images/store.svg)",
+        scene: "url(../images/store.svg)",
         text: "You enter the store.",
         "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
         "button action": [buyHealth, buyWeapon, goTown]
     },
     {
         name: "cave",
-        scene: "url(assets/images/cave.svg)",
+        scene: "url(/assets/images/cave.svg)",
         text: "You enter the cave. You see some monsters.",
         "button text": ["fight slime", "fight fanged beast", "Go to town square"],
         "button action": [fightSlime, fightBeast, goTown]

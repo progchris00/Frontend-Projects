@@ -37,7 +37,7 @@ main {
 
 #scene {
   background-color: #30292e;
-  background-image: url(/assets/images/start.svg);
+  background-image: url(../images/start.svg);
   height: 390px;
   background-size: contain;
   background-repeat: no-repeat;
