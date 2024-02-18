@@ -19,7 +19,8 @@ let currentWeapon = 0;
 // Monster Stats
 let monsterStats = document.querySelector("#monsterStats");
 let monsterName = document.querySelector("#monsterName");
-let monsterHealth = document.querySelector("#monsterHealth");
+let monsterHealthText = document.querySelector("#monsterHealth");
+let monsterHealth;
 
 // Buttons
 let controls = document.querySelector("#controls");
@@ -188,18 +189,20 @@ function goFight() {
     update(locations[3]);
     controls.style.paddingBottom = "15px";
     monsterStats.style.display = "flex";
+
+    monsterHealth = monsters[fighting].health
     monsterName.innerText = monsters[fighting].name;
-    monsterHealth.innerText = monsters[fighting].health;
+    monsterHealthText.innerText = monsterHealth;
     scene.style.backgroundImage = monsters[fighting].scene;
 }
 
 function attack() {
-    monsters[fighting].health -= weapons[currentWeapon].power;
     text.innerText = `The ${monsters[fighting].name} attacks. You attack it with your ${weapons[currentWeapon].name}`
     health -= monsters[fighting].level;
+    monsterHealth -= weapons[currentWeapon].power;
     healthText.innerText = health;
-    monsterHealth.innerText = monsters[fighting].health;
-    if (monsters[fighting].health <= 0)
+    monsterHealthText.innerText = monsterHealth;
+    if (monsterHealth <= 0)
     {
         defeatMonster();
     }
