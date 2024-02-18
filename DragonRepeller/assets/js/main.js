@@ -1,24 +1,28 @@
 let scene = document.querySelector("#scene");
 let text = document.querySelector("#text");
-let inventoryText = document.querySelector("#inventoryText");
-let inventory = ["stick"];
-let currentWeapon = 0;
+
 let monsterStats = document.querySelector("#monsterStats");
 let monsterName = document.querySelector("#monsterName");
 let monsterHealth = document.querySelector("#monsterHealth");
-let controls = document.querySelector("#controls");
 let fighting;
 
-// Stats
+// Character stats
 let xp = 0;
 let health = 100;
 let gold = 50;
+let inventory = ["stick"];
 
+// Character Stat text
 let xpText = document.querySelector("#xpText");
 let healthText = document.querySelector("#healthText");
 let goldText = document.querySelector("#goldText");
+let inventoryText = document.querySelector("#inventoryText");
+
+let currentWeapon = 0;
 
 // Buttons
+let controls = document.querySelector("#controls");
+
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -28,7 +32,7 @@ button2.onclick = goCave;
 button3.onclick = fightDragon;
 
 // Location
-let locations = [
+const locations = [
     {
         name: "store",
         scene: "url(assets/images/store.svg)",
@@ -191,5 +195,5 @@ function attack() {
 }
 
 function dodge() {
-    
+    text.innerText = `You dodge the attack from the ${monsters[fighting].name}`;
 }
