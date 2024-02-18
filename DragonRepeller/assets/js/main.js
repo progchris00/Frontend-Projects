@@ -62,6 +62,13 @@ const locations = [
         "button text": ["attack", "dodge", "run"],
         "button action": [attack, dodge, goTown]
     },
+    {
+        name: "defeat monster",
+        text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.',
+        scene: "url(assets/images/cave.svg)",
+        "button text": ["Go to town square", "Go to town square", "Go to town square"],
+        "button action": [goTown, goTown, goTown]
+    }
 ]
 
 // Weapons
@@ -99,7 +106,9 @@ const monsters = [
 // Functions
 
 function update(location) {
+    monsterStats.style.display = "none";
     text.innerText = location.text;
+    controls.style.paddingBottom = "0";
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];
     button3.innerText = location["button text"][2];
@@ -125,8 +134,6 @@ function goCave() {
 }
 
 function goTown() {
-    controls.style.paddingBottom = "0";
-    monsterStats.style.display = "none";
     update(locations[2]);
 }
 
@@ -217,8 +224,7 @@ function lose() {
 function defeatMonster() {
     gold += 13;
     xp += monsters[fighting].level;
-    monsters[fighting].health = 
-    text.innerText = 'The monster screams "Arg!" as it dies. You gain experience points and find gold.';
     xpText.innerText = xp;
     goldText.innerText = gold;
+    update(locations[4]);
 }
