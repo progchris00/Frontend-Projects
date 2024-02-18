@@ -1,9 +1,5 @@
 let scene = document.querySelector("#scene");
 let text = document.querySelector("#text");
-
-let monsterStats = document.querySelector("#monsterStats");
-let monsterName = document.querySelector("#monsterName");
-let monsterHealth = document.querySelector("#monsterHealth");
 let fighting;
 
 // Character stats
@@ -19,6 +15,11 @@ let goldText = document.querySelector("#goldText");
 let inventoryText = document.querySelector("#inventoryText");
 
 let currentWeapon = 0;
+
+// Monster Stats
+let monsterStats = document.querySelector("#monsterStats");
+let monsterName = document.querySelector("#monsterName");
+let monsterHealth = document.querySelector("#monsterHealth");
 
 // Buttons
 let controls = document.querySelector("#controls");
@@ -185,15 +186,39 @@ function goFight() {
     scene.style.backgroundImage = monsters[fighting].scene;
 }
 
-
 function attack() {
+    monsters[fighting].health -= weapons[currentWeapon].power;
     text.innerText = `The ${monsters[fighting].name} attacks. You attack it with your ${weapons[currentWeapon].name}`
     health -= monsters[fighting].level;
     healthText.innerText = health;
-    monsters[fighting].health -= weapons[currentWeapon].power;
     monsterHealth.innerText = monsters[fighting].health;
+    if (monsters[fighting].health <= 0)
+    {
+        defeatMonster();
+    }
+    else if (health <= 0)
+    {
+        lose();
+    }
 }
 
 function dodge() {
     text.innerText = `You dodge the attack from the ${monsters[fighting].name}`;
+}
+
+function lose() {
+    xp = 0;
+    health = 100;
+    gold = 50;
+    inventory = ["stick"];
+    update(locations[2]);
+}
+
+function defeatMonster() {
+    gold += 13;
+    xp += monsters[fighting].level;
+    monsters[fighting].health = 
+    text.innerText = 'The monster screams "Arg!" as it dies. You gain experience points and find gold.';
+    xpText.innerText = xp;
+    goldText.innerText = gold;
 }
