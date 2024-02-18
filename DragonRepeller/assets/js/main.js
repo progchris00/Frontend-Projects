@@ -7,6 +7,7 @@ let monsterStats = document.querySelector("#monsterStats");
 let monsterName = document.querySelector("#monsterName");
 let monsterHealth = document.querySelector("#monsterHealth");
 let controls = document.querySelector("#controls");
+let fighting;
 
 // Stats
 let xp = 0;
@@ -48,6 +49,13 @@ let locations = [
         scene: "url(assets/images/town.svg)",
         "button text": ["go to store", "go to cave", "fight dragon"],
         "button action": [goStore, goCave, fightDragon]
+    },
+    {
+        name: "fighting",
+        text: "You are fighting a monster.",
+        scene: "url(assets/images/cave.svg)",
+        "button text": ["attack", "dodge", "run"],
+        "button action": [attack, dodge, goTown]
     },
 ]
 
@@ -150,36 +158,36 @@ function buyWeapon() {
 }
 
 function fightSlime() {
-    goFight(monsters[0]);
+    fighting = 0;
+    goFight();
 }
 
 function fightBeast() {
-    goFight(monsters[1]);
+    fighting = 1;
+    goFight();
 }
 
 function fightDragon() {
-    goFight(monsters[2]);
+    fighting = 2;
+    goFight();
 }
 
-function goFight(monster) {
+function goFight() {
+    update(locations[3]);
     controls.style.paddingBottom = "15px";
     monsterStats.style.display = "flex";
-    monsterName.innerText = monster.name;
-    monsterHealth.innerText = monster.health;
-
-    button1.innerText = "attack";
-    button2.innerText = "dodge";
-    button3.innerText = "run";
-    button1.onclick = attack;
-    button2.onclick = dodge;
-    button3.onclick = goTown;
-    text.innerText = "You are fighting a monster.";
-    scene.style.backgroundImage = monster.scene;
+    monsterName.innerText = monsters[fighting].name;
+    monsterHealth.innerText = monsters[fighting].health;
+    scene.style.backgroundImage = monsters[fighting].scene;
 }
 
 
 function attack() {
-
+    text.innerText = `The ${monsters[fighting].name} attacks. You attack it with your ${weapons[currentWeapon].name}`
+    health -= monsters[fighting].level;
+    healthText.innerText = health;
+    monsters[fighting].health -= weapons[currentWeapon].power;
+    monsterHealth.innerText = monsters[fighting].health;
 }
 
 function dodge() {
