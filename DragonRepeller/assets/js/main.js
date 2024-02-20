@@ -71,11 +71,18 @@ const locations = [
         "button action": [goTown, goTown, goTown]
     },
     {
-        name: "restart",
-        text: "You lose",
+        name: "lose",
+        text: "You die. &#x2620;",
         scene: "url(assets/images/start.svg)",
         "button text": ["Restart", "Restart", "Restart"],
-        "button action": [startGame, startGame, startGame]
+        "button action": [restart, restart, restart]
+    },
+    {
+        name: "win",
+        text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;",
+        scene: "url(assets/images/start.svg)",
+        "button text": ["Restart", "Restart", "Restart"],
+        "button action": [restart, restart, restart]
     }
 ]
 
@@ -115,7 +122,7 @@ const monsters = [
 
 function update(location) {
     monsterStats.style.display = "none";
-    text.innerText = location.text;
+    text.innerHTML = location.text;
     controls.style.paddingBottom = "0";
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];
@@ -224,7 +231,6 @@ function dodge() {
 }
 
 function lose() {
-    restart();
     update(locations[5]);
 }
 
@@ -237,8 +243,6 @@ function defeatMonster() {
 }
 
 function restart() {
-    button2.style.display = "none";
-    button3.style.display = "none";
     xp = 0;
     health = 100;
     gold = 50;
@@ -248,4 +252,7 @@ function restart() {
     healthText.innerText = health;
     goldText.innerText = gold;
     inventoryText.innerText  = inventory;
+
+    goTown();
 }
+
