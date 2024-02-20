@@ -246,6 +246,7 @@ function restart() {
     xp = 0;
     health = 100;
     gold = 50;
+    currentWeapon = 0;
     inventory = ["stick"];
 
     xpText.innerText = xp;
@@ -254,5 +255,9 @@ function restart() {
     inventoryText.innerText  = inventory;
 
     goTown();
+}
+
+function winGame() {
+    update(locations[6]);
 }
 
