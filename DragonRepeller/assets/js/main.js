@@ -69,6 +69,13 @@ const locations = [
         scene: "url(assets/images/cave.svg)",
         "button text": ["Go to town square", "Go to town square", "Go to town square"],
         "button action": [goTown, goTown, goTown]
+    },
+    {
+        name: "restart",
+        text: "You lose",
+        scene: "url(assets/images/start.svg)",
+        "button text": ["Restart", "Restart", "Restart"],
+        "button action": [startGame, startGame, startGame]
     }
 ]
 
@@ -217,11 +224,8 @@ function dodge() {
 }
 
 function lose() {
-    xp = 0;
-    health = 100;
-    gold = 50;
-    inventory = ["stick"];
-    update(locations[2]);
+    restart();
+    update(locations[5]);
 }
 
 function defeatMonster() {
@@ -230,4 +234,18 @@ function defeatMonster() {
     xpText.innerText = xp;
     goldText.innerText = gold;
     update(locations[4]);
+}
+
+function restart() {
+    button2.style.display = "none";
+    button3.style.display = "none";
+    xp = 0;
+    health = 100;
+    gold = 50;
+    inventory = ["stick"];
+
+    xpText.innerText = xp;
+    healthText.innerText = health;
+    goldText.innerText = gold;
+    inventoryText.innerText  = inventory;
 }
