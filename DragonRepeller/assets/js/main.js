@@ -73,14 +73,14 @@ const locations = [
     {
         name: "lose",
         text: "You die. &#x2620;",
-        scene: "url(assets/images/start.svg)",
+        scene: "url(assets/images/lose.svg)",
         "button text": ["Restart", "Restart", "Restart"],
         "button action": [restart, restart, restart]
     },
     {
         name: "win",
         text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;",
-        scene: "url(assets/images/start.svg)",
+        scene: "url(assets/images/win.svg)",
         "button text": ["Restart", "Restart", "Restart"],
         "button action": [restart, restart, restart]
     },
