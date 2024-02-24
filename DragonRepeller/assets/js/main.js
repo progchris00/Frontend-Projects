@@ -283,7 +283,7 @@ function lose() {
 }
 
 function defeatMonster() {
-    gold += 13;
+    gold += Math.floor(monsters[fighting].level * 6.7);
     xp += monsters[fighting].level;
     xpText.innerText = xp;
     goldText.innerText = gold;
