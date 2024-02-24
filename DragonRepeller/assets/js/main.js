@@ -234,17 +234,29 @@ function goFight() {
 function attack() {
     text.innerText = `The ${monsters[fighting].name} attacks. You attack it with your ${weapons[currentWeapon].name}`
     health -= getMonsterAttackValue(monsters[fighting].level);
-    monsterHealth -= weapons[currentWeapon].power;
     healthText.innerText = health;
-    monsterHealthText.innerText = monsterHealth;
+    
+    if (isMonsterHit()) {
+        monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
+        monsterHealthText.innerText = monsterHealth;
+    } else {
+        text.innerText = "You missed"
+    }
+
     if (monsterHealth <= 0)
     {
-        defeatMonster();
+        if (fighting === 2)
+        {
+            winGame();
+        } else {
+            defeatMonster();
+        }
     }
     else if (health <= 0)
     {
         lose();
     }
+
 }
 
 function getMonsterAttackValue(level)
@@ -256,6 +268,10 @@ function getMonsterAttackValue(level)
 
     // So here, just return hit if it is greater than 0
     return hit > 0 ? hit : 0;
+}
+
+function isMonsterHit() {
+    return Math.random() > 0.2 || health < 20;
 }
 
 function dodge() {
