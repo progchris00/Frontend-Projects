@@ -233,7 +233,7 @@ function goFight() {
 
 function attack() {
     text.innerText = `The ${monsters[fighting].name} attacks. You attack it with your ${weapons[currentWeapon].name}`
-    health -= monsters[fighting].level;
+    health -= getMonsterAttackValue(monsters[fighting].level);
     monsterHealth -= weapons[currentWeapon].power;
     healthText.innerText = health;
     monsterHealthText.innerText = monsterHealth;
@@ -245,6 +245,17 @@ function attack() {
     {
         lose();
     }
+}
+
+function getMonsterAttackValue(level)
+{
+    // If the difference between the level * 5 and xp is 
+    // a negative number, it will be added to the char health
+    // instead of subtracting it.
+    let hit = (level * 5) - (Math.floor(Math.random() * xp));
+
+    // So here, just return hit if it is greater than 0
+    return hit > 0 ? hit : 0;
 }
 
 function dodge() {
