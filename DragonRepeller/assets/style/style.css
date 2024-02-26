@@ -86,3 +86,17 @@ button {
   background-color: #ac3e00;
   color: white;
 }
+
+/* Fonts */
+#text {
+  font-family: "Electrolize", sans-serif;
+}
+
+#stats {
+  font-family: "Play", sans-serif;
+}
+
+button {
+  font-family: "Electrolize", sans-serif;
+  font-weight: 700;
+}
