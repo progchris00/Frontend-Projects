@@ -27,8 +27,14 @@ main {
 }
 
 .output {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
   height: 200px;
   width: 100%;
+  color: white;
+  padding: 30px 30px;
+  font-size: 42px;
 }
 
 .keypad {
